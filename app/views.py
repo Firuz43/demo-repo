@@ -8,4 +8,4 @@ def index(request):
 
 
 def create(request, pk):
-    return render
+    return render(request, id=pk)
