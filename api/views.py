@@ -24,9 +24,6 @@ def apiView(request):
     return Response(api_urls)
 
 
-
-
-
 @api_view(['POST'])
 def addItem(request):
     item = ItemSerializer(data=request.data)
@@ -41,3 +38,6 @@ def addItem(request):
         return Response(status=status.HTTP_404_NOT_FOUND)
 
 
+@api_view(['GET'])
+def viewItems(request):
+    if request.query_params:
