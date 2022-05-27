@@ -1,5 +1,12 @@
 {% extends 'app/base.html' %}
-
+<!--Block-->
 {% block title %}home{% endblock %}
 
-{% block content %} <h1>Hi</h1> {% endblock %}
+<!--Content-->
+{% block content %}
+<form action="" , method="POST">
+  <!--CSRF protection-->
+  {% csrf_token %} {{form}}
+  <input type="submit" , value="Submit" />
+</form>
+{% endblock %}
