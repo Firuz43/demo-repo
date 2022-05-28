@@ -6,6 +6,7 @@
 {% block content %}
 <form action="" , method="POST">
   <!--CSRF protection-->
+  <!--Code base-->
   {% csrf_token %} {{form}}
   <input type="submit" , value="Submit" />
 </form>
